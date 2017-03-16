@@ -45,7 +45,7 @@ angular.module('app').service('AgendaSrv',function(){
          var indice = appuntamenti.findIndex(function(el){
              return el.id ==app.id;
          })
-         appuntamenti.spice(indice,1,updateoggetto);
+         appuntamenti.splice(indice,1,updateoggetto);
           
      }
 

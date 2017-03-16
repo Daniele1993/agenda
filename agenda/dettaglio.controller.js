@@ -7,6 +7,6 @@ angular.module('app').controller('dettaglioCtrl',function($scope,appuntamento,Ag
 
     },50);
     $scope.modifica =function(){
-        console.log($scope.appuntamento)
+      AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
     }
 })

@@ -8,7 +8,7 @@
    <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
     <div class="thumbnail" style=border:1px solid{{app.priorita}}>
-      <img src="{{app.image}}" width="300px">
+      <img ng-src="{{app.image}}" width="300px">
       <div class="caption">
         <h3>{{app.titolo}}</h3>
         <p>{{app.data|date:'dd/MM/yyyy'}}alle:{{app.data|date:'HH:mm'}}</p>
