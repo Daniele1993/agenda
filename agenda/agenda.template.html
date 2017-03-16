@@ -1,36 +1,22 @@
+  <ng-include src="'navbar.template.html'"></ng-include>
+
 <div class="container">
+
+<h1 class="text-center">L'agenda di DIO!!!!!!</h1>
+
 
    <div class="row">
   <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
-    <div class="thumbnail" style="border: 1px solid {{app.priorita}}; border-radius:10px">
-      <img src="http://www.lastampa.it/rw/Pub/p4/2017/01/23/VaticanInsider/Foto/RitagliWeb/dd82c1a6f0091b6d16b94787b2a17309-kl4C-U1100924097900YVD-1024x576@LaStampa.it.jpg" width="300px">
+    <div class="thumbnail" style=border:1px solid{{app.priorita}}>
+      <img src="{{app.image}}" width="300px">
       <div class="caption">
         <h3>{{app.titolo}}</h3>
         <p>{{app.data|date:'dd/MM/yyyy'}}alle:{{app.data|date:'HH:mm'}}</p>
-        <p><a class="btn btn-primary" role="button">Vai</a> <a class="btn btn-danger" role="button">Elimina</a></p>
+        <p><a class="btn btn-primary" role="button" ui-sref="dettaglio({id:app.id})">Vai</a> <a class="btn btn-danger"role="button" ng-click="elimina($index)">Elimina</a></p>
       </div>
     </div>
   </div>
-   <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
-    <div class="thumbnail" style="border: 1px solid {{app.priorita}}; border-radius:10px">
-      <img src="https://i.ytimg.com/vi/0pZwJQMdZ4g/hqdefault.jpg" width="215px">
-      <div class="caption">
-        <h3>{{app.titolo}}</h3>
-        <p>{{app.data|date:'dd/MM/yyyy'}}alle:{{app.data|date:'HH:mm'}}</p>
-        <p><a class="btn btn-primary" role="button">Vai</a> <a class="btn btn-danger" role="button">Elimina</a></p>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4" ng-repeat="app in appuntamenti">
-    <div class="thumbnail" style="border: 1px solid {{app.priorita}}; border-radius:10px">
-      <img src="https://i.ytimg.com/vi/MIPKeS3moEM/hqdefault.jpg" width="215px">
-      <div class="caption">
-        <h3>{{app.titolo}}</h3>
-        <p>{{app.data|date:'dd/MM/yyyy'}}alle:{{app.data|date:'HH:mm'}}</p>
-        <p><a class="btn btn-primary" role="button">Vai</a> <a class="btn btn-danger" role="button">Elimina</a></p>
-      </div>
-    </div>
-  </div>
+
   
 </div>
 
