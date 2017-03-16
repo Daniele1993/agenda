@@ -6,6 +6,7 @@ angular.module('app').controller('dettaglioCtrl',function($scope,appuntamento,Ag
         $scope.loading =false;
 
     },50);
+
     //controller del tasto modifica
     $scope.modifica =function(){
       AgendaSrv.aggiornaAppuntamento($scope.appuntamento);
@@ -17,4 +18,6 @@ angular.module('app').controller('dettaglioCtrl',function($scope,appuntamento,Ag
     $scope.back=function(){  
         $state.go('/'); 
     }
+    //controller del tasto crea
+    
 })

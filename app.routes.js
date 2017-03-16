@@ -29,7 +29,12 @@ angular.module('app').config(function($stateProvider,$urlRouterProvider){
          onExit:function(){
              console.log("sono uscito");
          }
-    });
+    
+    })
+        .state('crea',{
+            url:'/crea',
+            templateUrl:'agenda/nuova.template.html',
+            controller:'NuovoCtrl'
 
-        
+        })
 });
