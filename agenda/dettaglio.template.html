@@ -6,9 +6,28 @@
     <form>
   <div class="form-group">
     <label for="Titolo">Titolo</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" ng-model="appuntamento.titolo">
+    <input type="text" class="form-control" id="exampleInputEmail1" ng-model="appuntamento.titolo">
+  </div>
+  <div class="form-group">
+    <label for="Descrizione">Descrizione</label>
+    <input type="text" class="form-control" id="descrizione" ng-model="appuntamento.descrizione">
+  </div>
+  <div class="form-group">
+    <label for="Luogo">Luogo</label>
+    <input type="text" class="form-control" id="luogo" ng-model="appuntamento.luogo">
+  </div>
+  <div class="form-group">
+    <select class="form-control" id="sel1" ng-model="appuntamento.priorita">
+              <option value="tutte">tutte</option>
+              <option value="red">Alta</option>
+             <option value="yellow">Media</option>
+              <option value="green">Bassa</option>
+            </select>
+    </div>
+  <div class="form-group">
+    <input type="datatime-local" ng-model="appuntamento.data">
   </div>
 
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
