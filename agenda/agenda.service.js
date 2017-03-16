@@ -39,9 +39,20 @@ angular.module('app').service('AgendaSrv',function(){
              return el.id ==id;
          })
      }
+
+     var aggiornaAppuntamento=function(app){
+         var updateoggetto= angular.copy(app);
+         var indice = appuntamenti.findIndex(function(el){
+             return el.id ==app.id;
+         })
+         appuntamenti.spice(indice,1,updateoggetto);
+          
+     }
+
     return{
         getAppuntamenti:getAppuntamenti,
         deleteAppuntamento:deleteAppuntamento,
-        getAppuntamento:getAppuntamento
+        getAppuntamento:getAppuntamento,
+        aggiornaAppuntamento:aggiornaAppuntamento
     }
 })
