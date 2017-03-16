@@ -18,6 +18,6 @@ angular.module('app').controller('dettaglioCtrl',function($scope,appuntamento,Ag
     $scope.back=function(){  
         $state.go('/'); 
     }
-    //controller del tasto crea
-    
+  
+
 })

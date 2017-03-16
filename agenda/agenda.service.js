@@ -49,10 +49,24 @@ angular.module('app').service('AgendaSrv',function(){
           
      }
 
+     var creaAppuntamento=function(app){
+         var nuovo=angular.copy(app);
+         var arrayId=[];
+         appuntamenti.forEach(function(el){
+             arrayId.push(el.id);
+         });
+
+         var id= Math.max(...arrayId);
+         nuovo.id = ++id;
+         appuntamenti.push(nuovo);
+     }
+
+
     return{
         getAppuntamenti:getAppuntamenti,
         deleteAppuntamento:deleteAppuntamento,
         getAppuntamento:getAppuntamento,
-        aggiornaAppuntamento:aggiornaAppuntamento
+        aggiornaAppuntamento:aggiornaAppuntamento,
+        creaAppuntamento:creaAppuntamento
     }
 })
